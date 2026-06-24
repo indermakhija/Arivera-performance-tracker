@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)file:///C:/Users/Inderpal%20S%20Makhija/Downloads/Puma%20SIS%20Reporting%20System.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .sc-placeholder{background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:rgba(0,0,0,.7);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:rgba(0,0,0,.5);background:rgba(0,0,0,.05);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style><script>window.__resources = {};</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="blob:null/2d9141e7-c8fb-4032-9c36-5183287dfac5"></script>
+<style>x-dc{display:none!important}</style><script src="./Puma SIS Reporting System_files/react.production.min.js.download" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script><script src="./Puma SIS Reporting System_files/react-dom.production.min.js.download" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script><style></style><link rel="preconnect" href="https://fonts.googleapis.com/" data-dc-tpl="1"><style data-dc-tpl="2">/* latin-ext */
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("blob:null/9aeac58d-de9b-456e-85e0-74b6a5463ae3") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("blob:null/8eda2c1a-aaf0-4acf-9938-06e453993062") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("blob:null/77475ce4-e33f-4bce-87b6-a6898e495d52") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("blob:null/ebb20a8f-4bbc-4e70-845e-d19ca1902960") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("blob:null/8b57e3e4-3a3f-4e39-9dc9-fc55178b8414") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("blob:null/43ead677-9cc4-404b-bf03-51304b5d8984") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("blob:null/8b57e3e4-3a3f-4e39-9dc9-fc55178b8414") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("blob:null/43ead677-9cc4-404b-bf03-51304b5d8984") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("blob:null/8b57e3e4-3a3f-4e39-9dc9-fc55178b8414") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("blob:null/43ead677-9cc4-404b-bf03-51304b5d8984") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("blob:null/8b57e3e4-3a3f-4e39-9dc9-fc55178b8414") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("blob:null/43ead677-9cc4-404b-bf03-51304b5d8984") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("blob:null/8b57e3e4-3a3f-4e39-9dc9-fc55178b8414") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("blob:null/43ead677-9cc4-404b-bf03-51304b5d8984") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style><style data-dc-tpl="3">
+    body { margin:0; background:#0d1117; font-family:'DM Sans',sans-serif; color:#e6edf3; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fillBar { from{width:0} to{width:var(--w)} }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+    ::-webkit-scrollbar{width:6px;height:6px} ::-webkit-scrollbar-track{background:#161b22} ::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
+  </style></head>
+<body>
+
+<div id="dc-root"><div class="sc-host" data-sc-name="Puma SIS Reporting System"><div data-dc-tpl="4" style="min-height: 100vh; background: rgb(13, 17, 23); display: flex; flex-direction: column;">
+
+  
+  <div data-dc-tpl="5" style="background: rgb(22, 27, 34); border-bottom: 1px solid rgb(33, 38, 45); padding: 0px 28px; display: flex; align-items: center; gap: 0px; position: sticky; top: 0px; z-index: 100;">
+    <div data-dc-tpl="6" style="display: flex; align-items: center; gap: 12px; padding: 14px 24px 14px 0px; margin-right: 32px; border-right: 1px solid rgb(33, 38, 45);">
+      <div data-dc-tpl="7" style="width: 32px; height: 32px; background: rgb(196, 18, 47); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; letter-spacing: -0.5px;">P</div>
+      <div data-dc-tpl="8">
+        <div data-dc-tpl="9" style="font-weight: 600; font-size: 13px; color: rgb(240, 246, 252); line-height: 1.2;">PUMA SIS Project</div>
+        <div data-dc-tpl="10" style="font-size: 10px; color: rgb(125, 133, 144); letter-spacing: 0.5px;">1,000 OUTLET SCALE · INDIA</div>
+      </div>
+    </div>
+    <div data-dc-tpl="11" style="display: flex; align-items: center; gap: 2px; flex: 1 1 0%;">
+      
+        <div data-dc-tpl="13" class="scp0" style="position: relative; padding: 16px 18px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; color: rgb(125, 133, 144); background: transparent;">
+          <span class="sc-interp">📊 Dashboard</span>
+          
+        </div>
+      
+        <div data-dc-tpl="13" class="scp0" style="position: relative; padding: 16px 18px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; color: rgb(240, 246, 252); background: rgba(196, 18, 47, 0.1);">
+          <span class="sc-interp">✏️ Enter Actuals</span>
+          
+            <div data-dc-tpl="15" style="position: absolute; left: 0px; right: 0px; bottom: 0px; height: 2px; background: rgb(196, 18, 47);"></div>
+          
+        </div>
+      
+        <div data-dc-tpl="13" class="scp0" style="position: relative; padding: 16px 18px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; color: rgb(125, 133, 144); background: transparent;">
+          <span class="sc-interp">📈 P&amp;L Tracker</span>
+          
+        </div>
+      
+        <div data-dc-tpl="13" class="scp0" style="position: relative; padding: 16px 18px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; color: rgb(125, 133, 144); background: transparent;">
+          <span class="sc-interp">🏪 Outlet Tracker</span>
+          
+        </div>
+      
+        <div data-dc-tpl="13" class="scp0" style="position: relative; padding: 16px 18px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; color: rgb(125, 133, 144); background: transparent;">
+          <span class="sc-interp">⚙️ Assumptions</span>
+          
+        </div>
+      
+    </div>
+    <div data-dc-tpl="16" style="display: flex; align-items: center; gap: 8px; margin-left: 16px;">
+      <div data-dc-tpl="17" style="font-size: 11px; color: rgb(125, 133, 144);">Scenario:</div>
+      <div data-dc-tpl="18" style="background: rgb(33, 38, 45); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 4px 10px; font-size: 12px; font-weight: 600; color: rgb(240, 246, 252);"><span class="sc-interp">BASE</span></div>
+    </div>
+  </div>
+
+  
+  <div data-dc-tpl="19" style="flex: 1 1 0%; padding: 28px; max-width: 1400px; width: 100%; box-sizing: border-box; margin: 0px auto;">
+
+    
+    
+
+    
+    
+      <div data-dc-tpl="175">
+        <div data-dc-tpl="176" style="margin-bottom: 24px; display: flex; align-items: flex-end; justify-content: space-between;">
+          <div data-dc-tpl="177">
+            <div data-dc-tpl="178" style="font-size: 22px; font-weight: 700; color: rgb(240, 246, 252); letter-spacing: -0.5px;">Enter Actuals</div>
+            <div data-dc-tpl="179" style="font-size: 13px; color: rgb(125, 133, 144); margin-top: 4px;">Record actual performance against plan · Data persists in browser</div>
+          </div>
+          <div data-dc-tpl="180" style="display: flex; gap: 10px;">
+            <div data-dc-tpl="181" class="scp1" style="background: transparent; border: 1px solid rgb(48, 54, 61); color: rgb(125, 133, 144); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: &quot;DM Sans&quot;, sans-serif;">Clear All</div>
+            <div data-dc-tpl="182" class="scp2" style="background: rgb(196, 18, 47); border: 1px solid rgb(196, 18, 47); color: rgb(255, 255, 255); border-radius: 8px; padding: 8px 20px; font-size: 13px; font-weight: 600; cursor: pointer;">Save Data</div>
+          </div>
+        </div>
+
+        
+        <div data-dc-tpl="183" style="background: rgb(22, 27, 34); border: 1px solid rgb(33, 38, 45); border-radius: 12px; padding: 24px; margin-bottom: 20px;">
+          <div data-dc-tpl="184" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <div data-dc-tpl="185">
+              <div data-dc-tpl="186" style="font-size: 14px; font-weight: 600; color: rgb(240, 246, 252);">Import from Excel</div>
+              <div data-dc-tpl="187" style="font-size: 12px; color: rgb(125, 133, 144); margin-top: 2px;">Upload your .xlsx to auto-populate actuals — outlets, revenue, GP &amp; PAT extracted automatically</div>
+            </div>
+            <div data-dc-tpl="188" style="font-size: 11px; color: rgb(125, 133, 144); background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 4px 10px;">Supports: PUMA SIS Report format</div>
+          </div>
+
+          
+          <div data-dc-tpl="189" style="border: 2px dashed rgb(48, 54, 61); border-radius: 10px; padding: 36px 20px; text-align: center; cursor: pointer; transition: 0.2s; background: transparent;">
+            <div data-dc-tpl="190" style="font-size: 40px; margin-bottom: 10px;"><span class="sc-interp">📊</span></div>
+            <div data-dc-tpl="191" style="font-size: 14px; font-weight: 600; color: rgb(240, 246, 252); margin-bottom: 6px;"><span class="sc-interp">Drop Excel file here or click to browse</span></div>
+            <div data-dc-tpl="192" style="font-size: 12px; color: rgb(125, 133, 144);"><span class="sc-interp">.xlsx files only · PUMA SIS Report format</span></div>
+            <input data-dc-tpl="193" type="file" accept=".xlsx" style="display: none;">
+          </div>
+
+          
+          
+
+          
+          
+        </div>
+
+        <div data-dc-tpl="225" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+
+          
+          <div data-dc-tpl="226" style="background: rgb(22, 27, 34); border: 1px solid rgb(33, 38, 45); border-radius: 12px; padding: 24px;">
+            <div data-dc-tpl="227" style="font-size: 14px; font-weight: 600; color: rgb(240, 246, 252); margin-bottom: 4px;">Annual Performance</div>
+            <div data-dc-tpl="228" style="font-size: 12px; color: rgb(125, 133, 144); margin-bottom: 20px;">Enter actuals for each year · ₹ Crores</div>
+            
+              <div data-dc-tpl="230" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgb(33, 38, 45);">
+                <div data-dc-tpl="231" style="font-size: 13px; font-weight: 600; color: rgb(240, 246, 252); margin-bottom: 12px;"><span class="sc-interp">Year 1</span></div>
+                <div data-dc-tpl="232" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <div data-dc-tpl="233">
+                    <label data-dc-tpl="234" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Outlets (actual)</label>
+                    <input data-dc-tpl="235" type="number" placeholder="200" class="scp4" value="200" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="236" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: <span class="sc-interp">200</span></div>
+                  </div>
+                  <div data-dc-tpl="237">
+                    <label data-dc-tpl="238" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Turnover (₹ Cr)</label>
+                    <input data-dc-tpl="239" type="number" placeholder="30" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="240" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">30</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="241">
+                    <label data-dc-tpl="242" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Profit (₹ Cr)</label>
+                    <input data-dc-tpl="243" type="number" placeholder="4.455" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="244" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">4.455</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="245">
+                    <label data-dc-tpl="246" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Net Profit PAT (₹ Cr)</label>
+                    <input data-dc-tpl="247" type="number" placeholder="1.053" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="248" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">1.053</span> Cr</div>
+                  </div>
+                </div>
+              </div>
+            
+              <div data-dc-tpl="230" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgb(33, 38, 45);">
+                <div data-dc-tpl="231" style="font-size: 13px; font-weight: 600; color: rgb(240, 246, 252); margin-bottom: 12px;"><span class="sc-interp">Year 2</span></div>
+                <div data-dc-tpl="232" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <div data-dc-tpl="233">
+                    <label data-dc-tpl="234" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Outlets (actual)</label>
+                    <input data-dc-tpl="235" type="number" placeholder="400" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="236" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: <span class="sc-interp">400</span></div>
+                  </div>
+                  <div data-dc-tpl="237">
+                    <label data-dc-tpl="238" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Turnover (₹ Cr)</label>
+                    <input data-dc-tpl="239" type="number" placeholder="78" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="240" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">78</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="241">
+                    <label data-dc-tpl="242" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Profit (₹ Cr)</label>
+                    <input data-dc-tpl="243" type="number" placeholder="11.583" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="244" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">11.583</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="245">
+                    <label data-dc-tpl="246" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Net Profit PAT (₹ Cr)</label>
+                    <input data-dc-tpl="247" type="number" placeholder="3.237" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="248" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">3.237</span> Cr</div>
+                  </div>
+                </div>
+              </div>
+            
+              <div data-dc-tpl="230" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgb(33, 38, 45);">
+                <div data-dc-tpl="231" style="font-size: 13px; font-weight: 600; color: rgb(240, 246, 252); margin-bottom: 12px;"><span class="sc-interp">Year 3</span></div>
+                <div data-dc-tpl="232" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <div data-dc-tpl="233">
+                    <label data-dc-tpl="234" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Outlets (actual)</label>
+                    <input data-dc-tpl="235" type="number" placeholder="600" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="236" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: <span class="sc-interp">600</span></div>
+                  </div>
+                  <div data-dc-tpl="237">
+                    <label data-dc-tpl="238" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Turnover (₹ Cr)</label>
+                    <input data-dc-tpl="239" type="number" placeholder="126" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="240" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">126</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="241">
+                    <label data-dc-tpl="242" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Profit (₹ Cr)</label>
+                    <input data-dc-tpl="243" type="number" placeholder="18.711" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="244" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">18.711</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="245">
+                    <label data-dc-tpl="246" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Net Profit PAT (₹ Cr)</label>
+                    <input data-dc-tpl="247" type="number" placeholder="5.687" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="248" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">5.687</span> Cr</div>
+                  </div>
+                </div>
+              </div>
+            
+              <div data-dc-tpl="230" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgb(33, 38, 45);">
+                <div data-dc-tpl="231" style="font-size: 13px; font-weight: 600; color: rgb(240, 246, 252); margin-bottom: 12px;"><span class="sc-interp">Year 4</span></div>
+                <div data-dc-tpl="232" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <div data-dc-tpl="233">
+                    <label data-dc-tpl="234" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Outlets (actual)</label>
+                    <input data-dc-tpl="235" type="number" placeholder="800" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="236" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: <span class="sc-interp">800</span></div>
+                  </div>
+                  <div data-dc-tpl="237">
+                    <label data-dc-tpl="238" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Turnover (₹ Cr)</label>
+                    <input data-dc-tpl="239" type="number" placeholder="174" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="240" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">174</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="241">
+                    <label data-dc-tpl="242" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Profit (₹ Cr)</label>
+                    <input data-dc-tpl="243" type="number" placeholder="25.839" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="244" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">25.839</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="245">
+                    <label data-dc-tpl="246" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Net Profit PAT (₹ Cr)</label>
+                    <input data-dc-tpl="247" type="number" placeholder="8.489" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="248" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">8.489</span> Cr</div>
+                  </div>
+                </div>
+              </div>
+            
+              <div data-dc-tpl="230" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgb(33, 38, 45);">
+                <div data-dc-tpl="231" style="font-size: 13px; font-weight: 600; color: rgb(240, 246, 252); margin-bottom: 12px;"><span class="sc-interp">Year 5</span></div>
+                <div data-dc-tpl="232" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <div data-dc-tpl="233">
+                    <label data-dc-tpl="234" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Outlets (actual)</label>
+                    <input data-dc-tpl="235" type="number" placeholder="1000" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="236" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: <span class="sc-interp">1000</span></div>
+                  </div>
+                  <div data-dc-tpl="237">
+                    <label data-dc-tpl="238" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Turnover (₹ Cr)</label>
+                    <input data-dc-tpl="239" type="number" placeholder="222" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="240" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">222</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="241">
+                    <label data-dc-tpl="242" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Gross Profit (₹ Cr)</label>
+                    <input data-dc-tpl="243" type="number" placeholder="32.967" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="244" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">32.967</span> Cr</div>
+                  </div>
+                  <div data-dc-tpl="245">
+                    <label data-dc-tpl="246" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Net Profit PAT (₹ Cr)</label>
+                    <input data-dc-tpl="247" type="number" placeholder="11.665" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                    <div data-dc-tpl="248" style="font-size: 10px; color: rgb(125, 133, 144); margin-top: 3px;">Plan: ₹<span class="sc-interp">11.665</span> Cr</div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          
+          <div data-dc-tpl="249" style="display: flex; flex-direction: column; gap: 20px;">
+            <div data-dc-tpl="250" style="background: rgb(22, 27, 34); border: 1px solid rgb(33, 38, 45); border-radius: 12px; padding: 24px;">
+              <div data-dc-tpl="251" style="font-size: 14px; font-weight: 600; color: rgb(240, 246, 252); margin-bottom: 4px;">Quarterly Outlet Count</div>
+              <div data-dc-tpl="252" style="font-size: 12px; color: rgb(125, 133, 144); margin-bottom: 20px;">Enter cumulative outlets at end of each quarter</div>
+              <div data-dc-tpl="253" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q1</span> · Plan: <span class="sc-interp">50</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="50" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q2</span> · Plan: <span class="sc-interp">100</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="100" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q3</span> · Plan: <span class="sc-interp">150</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="150" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q4</span> · Plan: <span class="sc-interp">200</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="200" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q5</span> · Plan: <span class="sc-interp">250</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="250" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q6</span> · Plan: <span class="sc-interp">300</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="300" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q7</span> · Plan: <span class="sc-interp">350</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="350" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q8</span> · Plan: <span class="sc-interp">400</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="400" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q9</span> · Plan: <span class="sc-interp">450</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="450" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q10</span> · Plan: <span class="sc-interp">500</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="500" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q11</span> · Plan: <span class="sc-interp">550</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="550" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q12</span> · Plan: <span class="sc-interp">600</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="600" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q13</span> · Plan: <span class="sc-interp">650</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="650" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q14</span> · Plan: <span class="sc-interp">700</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="700" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q15</span> · Plan: <span class="sc-interp">750</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="750" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q16</span> · Plan: <span class="sc-interp">800</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="800" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q17</span> · Plan: <span class="sc-interp">850</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="850" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q18</span> · Plan: <span class="sc-interp">900</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="900" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q19</span> · Plan: <span class="sc-interp">950</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="950" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+                  <div data-dc-tpl="255">
+                    <label data-dc-tpl="256" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;"><span class="sc-interp">Q20</span> · Plan: <span class="sc-interp">1000</span></label>
+                    <input data-dc-tpl="257" type="number" placeholder="1000" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 7px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Mono&quot;, monospace; box-sizing: border-box;">
+                  </div>
+                
+              </div>
+            </div>
+
+            
+            <div data-dc-tpl="258" style="background: rgb(22, 27, 34); border: 1px solid rgb(33, 38, 45); border-radius: 12px; padding: 24px;">
+              <div data-dc-tpl="259" style="font-size: 14px; font-weight: 600; color: rgb(240, 246, 252); margin-bottom: 12px;">Notes / Period</div>
+              <div data-dc-tpl="260">
+                <label data-dc-tpl="261" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Reporting Period</label>
+                <input data-dc-tpl="262" type="text" placeholder="e.g. Q2 FY2025" class="scp4" value="" style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Sans&quot;, monospace; box-sizing: border-box; margin-bottom: 10px;">
+                <label data-dc-tpl="263" style="font-size: 11px; color: rgb(125, 133, 144); display: block; margin-bottom: 4px;">Comments / Key Observations</label>
+                <textarea data-dc-tpl="264" placeholder="Add observations, variance explanations..." style="width: 100%; background: rgb(13, 17, 23); border: 1px solid rgb(48, 54, 61); border-radius: 6px; padding: 8px 10px; color: rgb(240, 246, 252); font-size: 13px; font-family: &quot;DM Sans&quot;, sans-serif; box-sizing: border-box; resize: vertical; min-height: 80px;"></textarea>
+              </div>
+              <div data-dc-tpl="265" style="margin-top: 16px; padding: 12px; background: rgb(33, 38, 45); border-radius: 8px; font-size: 12px; font-weight: 500; color: rgb(125, 133, 144); text-align: center;"><span class="sc-interp">Ready to save · Click "Save Data" to persist</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+  </div></div></div></div>
+<script type="text/x-dc" data-dc-script="" data-props="{
+  &quot;$preview&quot;: {&quot;width&quot;: 1400, &quot;height&quot;: 900}
+}">
+class Component extends DCLogic {
+  state = {
+    activeTab: 'dashboard',
+    scenario: 1,
+    saveStatus: 'idle',
+    actuals: {},
+    uploadStatus: 'idle', // idle | parsing | preview | done | error
+    uploadExtracted: {},
+    uploadPreviewRows: [],
+    uploadFileName: '',
+    uploadError: '',
+  };
+
+  componentDidMount() {
+    this.setState({ actuals: this._loadActuals() });
+  }
+
+  _loadActuals() {
+    try { return JSON.parse(localStorage.getItem('puma_sis_actuals') || '{}'); }
+    catch(e) { return {}; }
+  }
+
+  _saveActuals(data) {
+    try { localStorage.setItem('puma_sis_actuals', JSON.stringify(data)); } catch(e) {}
+  }
+
+  // ── XLSX parsing ───────────────────────────────────────────
+  _parseZipEntries(bytes) {
+    const files = [];
+    let i = 0;
+    while (i < bytes.length - 4) {
+      if (bytes[i]===0x50&&bytes[i+1]===0x4B&&bytes[i+2]===0x03&&bytes[i+3]===0x04) {
+        const compression = bytes[i+8]|(bytes[i+9]<<8);
+        const compSize = bytes[i+18]|(bytes[i+19]<<8)|(bytes[i+20]<<16)|(bytes[i+21]<<24);
+        const fnLen = bytes[i+26]|(bytes[i+27]<<8);
+        const extraLen = bytes[i+28]|(bytes[i+29]<<8);
+        const fn = new TextDecoder().decode(bytes.slice(i+30,i+30+fnLen));
+        const dataStart = i+30+fnLen+extraLen;
+        files.push({name:fn, compression, offset:dataStart, size:compSize});
+        i = dataStart + compSize;
+      } else { i++; }
+    }
+    return files;
+  }
+
+  async _readZipEntry(bytes, entries, name) {
+    const e = entries.find(x => x.name === name);
+    if (!e) return '';
+    if (e.compression === 0) return new TextDecoder('utf-8',{fatal:false}).decode(bytes.slice(e.offset, e.offset+e.size));
+    if (e.compression === 8) {
+      const ds = new DecompressionStream('deflate-raw');
+      const w = ds.writable.getWriter();
+      w.write(bytes.slice(e.offset, e.offset+e.size));
+      w.close();
+      const chunks = [];
+      const r = ds.readable.getReader();
+      while(true){ const {done,value} = await r.read(); if(done) break; chunks.push(value); }
+      const total = chunks.reduce((s,c)=>s+c.length,0);
+      const out = new Uint8Array(total);
+      let off=0; for(const c of chunks){ out.set(c,off); off+=c.length; }
+      return new TextDecoder('utf-8',{fatal:false}).decode(out);
+    }
+    return '';
+  }
+
+  _parseSharedStrings(xml) {
+    return [...xml.matchAll(/<si>([\s\S]*?)<\/si>/g)].map(m =>
+      [...m[1].matchAll(/<t[^>]*>([^<]*)<\/t>/g)].map(p => p[1]).join('')
+    );
+  }
+
+  _parseSheetRows(xml, strings) {
+    const rows = {};
+    for (const rm of xml.matchAll(/<row r="(\d+)"[^>]*>([\s\S]*?)<\/row>/g)) {
+      const rn = parseInt(rm[1]);
+      rows[rn] = {};
+      for (const cm of rm[2].matchAll(/<c r="([A-Z]+\d+)"[^>]*(?:t="([^"]*)")?[^>]*>(?:<f>[^<]*<\/f>)?(?:<v>([^<]*)<\/v>)?/g)) {
+        const col = cm[1].replace(/\d+/,'');
+        const val = cm[3];
+        if (val !== undefined) rows[rn][col] = cm[2]==='s' ? strings[parseInt(val)] : val;
+      }
+    }
+    return rows;
+  }
+
+  async _handleFileUpload(file) {
+    if (!file || !file.name.toLowerCase().endsWith('.xlsx')) {
+      this.setState({ uploadStatus:'error', uploadError:'Please upload a valid .xlsx file' });
+      return;
+    }
+    this.setState({ uploadStatus:'parsing', uploadError:'', uploadFileName: file.name });
+    try {
+      const buf = await file.arrayBuffer();
+      const bytes = new Uint8Array(buf);
+      const entries = this._parseZipEntries(bytes);
+      const ssXml = await this._readZipEntry(bytes, entries, 'xl/sharedStrings.xml');
+      const strings = this._parseSharedStrings(ssXml);
+      const extracted = {};
+      const yearCols = ['C','D','E','F','G'];
+
+      // Scan all sheets for recognizable PnL row labels
+      for (let s = 1; s <= 15; s++) {
+        const xml = await this._readZipEntry(bytes, entries, `xl/worksheets/sheet${s}.xml`);
+        if (!xml) continue;
+        const rows = this._parseSheetRows(xml, strings);
+        let hasPnL = false;
+        for (const [, cols] of Object.entries(rows)) {
+          const bVal = String(cols['B']||cols['A']||'').toLowerCase();
+          if (bVal.includes('outlet') || bVal.includes('gross turnover') || bVal.includes('profit after tax')) { hasPnL = true; break; }
+        }
+        if (!hasPnL) continue;
+
+        for (const [, cols] of Object.entries(rows)) {
+          const label = String(cols['B']||cols['A']||'').toLowerCase().trim();
+          if (!label) continue;
+          const isOutlets  = label.includes('no. of outlet') || (label.includes('outlet') && !label.includes('invest') && !label.includes('capex') && !label.includes('security'));
+          const isRevenue  = label.includes('gross turnover') || label.includes('turnover at mrp');
+          const isGP       = (label.includes('gross margin') || label.includes('gross profit')) && !label.includes('%');
+          const isPAT      = label.includes('profit after tax') || label === 'pat' || (label.includes('net profit') && !label.includes('margin') && !label.includes('%'));
+
+          const key = isOutlets?'outlets': isRevenue?'rev': isGP?'gp': isPAT?'pat': null;
+          if (!key) continue;
+          yearCols.forEach((col,i) => {
+            const v = cols[col];
+            if (v !== undefined && v !== '' && !isNaN(Number(v))) {
+              if (!extracted[`${key}_${i}`]) extracted[`${key}_${i}`] = Number(v);
+            }
+          });
+        }
+      }
+
+      // Build preview rows
+      const P = this._getPlan();
+      const previewDefs = [
+        { label:'Outlets',            prefix:'outlets', planArr: P.outlets,       fmt: v=>Math.round(v).toString() },
+        { label:'Gross Turnover (₹ Cr)',prefix:'rev',   planArr: P.grossTurnover, fmt: v=>Number(v).toFixed(2) },
+        { label:'Gross Profit (₹ Cr)', prefix:'gp',    planArr: P.grossProfit,   fmt: v=>Number(v).toFixed(3) },
+        { label:'Net PAT (₹ Cr)',      prefix:'pat',    planArr: P.pat,           fmt: v=>Number(v).toFixed(3) },
+      ];
+
+      const uploadPreviewRows = previewDefs.map(def => {
+        const row = { label: def.label };
+        let found = 0;
+        for (let i=0;i<5;i++) {
+          const v = extracted[`${def.prefix}_${i}`];
+          const has = v !== undefined;
+          if(has) found++;
+          row[`v${i}`] = has ? def.fmt(v) : '—';
+          row[`v${i}color`] = has ? '#22c55e' : '#3a3f47';
+        }
+        row.foundLabel = found === 5 ? '✓ All 5' : found > 0 ? `${found}/5` : '✗ None';
+        row.foundBg    = found === 5 ? '#0d3a1a' : found > 0 ? '#1a2a0d' : '#3a0d0d';
+        row.foundColor = found === 5 ? '#22c55e' : found > 0 ? '#a3e635' : '#ef4444';
+        return row;
+      });
+
+      this.setState({ uploadStatus:'preview', uploadExtracted: extracted, uploadPreviewRows });
+    } catch(err) {
+      this.setState({ uploadStatus:'error', uploadError: 'Parse error: ' + err.message });
+    }
+  }
+
+  _confirmImport() {
+    const merged = { ...this.state.actuals, ...this.state.uploadExtracted };
+    this._saveActuals(merged);
+    this.setState({ actuals: merged, uploadStatus:'done', uploadPreviewRows:[], uploadExtracted:{} });
+    setTimeout(() => this.setState({ uploadStatus:'idle' }), 3000);
+  }
+
+  _cancelImport() {
+    this.setState({ uploadStatus:'idle', uploadPreviewRows:[], uploadExtracted:{} });
+  }
+
+  _getPlan() {
+    return {
+      years: ['Year 1','Year 2','Year 3','Year 4','Year 5'],
+      outlets:        [200,   400,    600,    800,    1000],
+      grossTurnover:  [30,    78,     126,    174,    222],
+      primaryBilling: [16.905,43.953, 71.001, 98.049, 125.097],
+      cogs:           [12.45, 32.37,  52.29,  72.21,  92.13],
+      grossProfit:    [4.455, 11.583, 18.711, 25.839, 32.967],
+      gpMargin:       [26.35, 26.35,  26.35,  26.35,  26.35],
+      ebitda:         [1.569, 4.395,  7.190,  9.984,  12.779],
+      pat:            [1.053, 3.237,  5.687,  8.489,  11.665],
+      patMargin:      [6.23,  7.36,   8.01,   8.66,   9.32],
+      cumCapital:     [3.94,  7.88,   11.82,  15.76,  19.70],
+    };
+  }
+
+  _getQuarterlyPlan() {
+    return [50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000];
+  }
+
+  _getProducts() {
+    return [
+      { name:'T-shirt',     fabric:'Dry Fit', mrp:'1,199–1,499', skus:8, mix:'6.75%',  gm:26.9 },
+      { name:'Track Pant',  fabric:'Dry Fit', mrp:'2,099–2,499', skus:8, mix:'11.95%', gm:26.9 },
+      { name:'Shorts',      fabric:'Dry Fit', mrp:'1,799–2,099', skus:8, mix:'10.39%', gm:26.9 },
+      { name:'Zipper',      fabric:'Dry Fit', mrp:'2,299–2,999', skus:4, mix:'6.49%',  gm:26.9 },
+      { name:'Polo',        fabric:'Dry Fit', mrp:'1,299–1,499', skus:4, mix:'3.64%',  gm:26.9 },
+      { name:'Caps',        fabric:'Dry Fit', mrp:'699–999',     skus:8, mix:'4.15%',  gm:18.8 },
+      { name:'Crew Neck T', fabric:'Cotton',  mrp:'999–1,199',   skus:8, mix:'5.71%',  gm:21.0 },
+      { name:'Polo',        fabric:'Cotton',  mrp:'1,299–1,499', skus:8, mix:'7.27%',  gm:22.3 },
+      { name:'Track Pant',  fabric:'Cotton',  mrp:'2,099–2,499', skus:4, mix:'5.97%',  gm:24.1 },
+      { name:'Shorts',      fabric:'Cotton',  mrp:'1,799–2,099', skus:4, mix:'4.94%',  gm:23.5 },
+      { name:'Sweat Shirt', fabric:'Fleece',  mrp:'2,499',       skus:4, mix:'6.49%',  gm:24.3 },
+      { name:'Hoodie',      fabric:'Fleece',  mrp:'2,999',       skus:4, mix:'7.79%',  gm:24.8 },
+      { name:'Zipper',      fabric:'Fleece',  mrp:'2,299–2,999', skus:4, mix:'7.79%',  gm:24.8 },
+      { name:'Track Pant',  fabric:'Fleece',  mrp:'2,099–2,499', skus:4, mix:'6.49%',  gm:24.3 },
+    ];
+  }
+
+  fmt(n, dec=2) {
+    if(n === null || n === undefined || n === '') return '—';
+    return Number(n).toFixed(dec);
+  }
+
+  fmtVar(plan, actual) {
+    if(actual === null || actual === undefined || actual === '') return { txt:'—', color:'#7d8590' };
+    const v = Number(actual) - Number(plan);
+    const pct = plan ? ((v / plan) * 100).toFixed(1) : 0;
+    const pos = v >= 0;
+    return { txt: (pos ? '+' : '') + pct + '%', color: pos ? '#22c55e' : '#ef4444' };
+  }
+
+  getActual(key, fallback = '') {
+    return this.state.actuals[key] !== undefined ? this.state.actuals[key] : fallback;
+  }
+
+  renderVals() {
+    const { activeTab, scenario, actuals, saveStatus } = this.state;
+    const P = this._getPlan();
+    const QUARTERLY_PLAN = this._getQuarterlyPlan();
+    const PRODUCTS = this._getProducts();
+    const a = actuals;
+
+    // chart geometry helper → returns line path, filled area path, and points (with % coords for overlays)
+    const mkChart = (vals, max, w, h, pt, pb) => {
+      const n = vals.length;
+      const pts = vals.map((v,i) => {
+        const x = n===1 ? 0 : (i/(n-1))*w;
+        const y = pt + (h-pt-pb)*(1-(v/max));
+        return { x, y, v, xPct:(x/w*100).toFixed(2), yPct:(y/h*100).toFixed(2) };
+      });
+      const line = pts.map((p,i)=>(i?'L':'M')+p.x.toFixed(1)+','+p.y.toFixed(1)).join(' ');
+      const area = line + ` L${w},${h} L0,${h} Z`;
+      return { pts, line, area };
+    };
+
+    // NAV TABS
+    const tabDefs = [
+      { id:'dashboard', label:'📊 Dashboard' },
+      { id:'actuals',   label:'✏️ Enter Actuals' },
+      { id:'pl',        label:'📈 P&L Tracker' },
+      { id:'outlets',   label:'🏪 Outlet Tracker' },
+      { id:'assumptions', label:'⚙️ Assumptions' },
+    ];
+    const tabs = tabDefs.map(t => ({
+      label: t.label,
+      active: activeTab === t.id,
+      onClick: () => this.setState({ activeTab: t.id }),
+      color: activeTab === t.id ? '#f0f6fc' : '#7d8590',
+    }));
+
+    // Style active tabs
+    tabs.forEach(t => {
+      t.borderColor = t.active ? '#C4122F' : 'transparent';
+      t.color = t.active ? '#f0f6fc' : '#7d8590';
+      t.tabBg = t.active ? 'rgba(196,18,47,0.10)' : 'transparent';
+    });
+
+    const scenarioLabel = ['','BASE','DOWNSIDE','BEAR'][scenario];
+
+    const lastUpdated = new Date().toLocaleDateString('en-IN', { day:'2-digit', month:'short', year:'numeric' });
+
+    // ─ KPI CARDS ─
+    const totalActualOutlets = Number(a.outlets_4 || 0) || Number(a.outlets_3 || 0) || Number(a.outlets_2 || 0) || Number(a.outlets_1 || 0) || Number(a.outlets_0 || 0) || 0;
+    const kpiDefs = [
+      { label:'Target Outlets · Y5', value:'1,000', sub:'Scale target', icon:'🏪', color:'#C4122F', series:P.outlets,       growth:'5Y ramp' },
+      { label:'Y5 Gross Turnover',   value:'₹222 Cr', sub:'At MRP (planned)', icon:'💰', color:'#3b82f6', series:P.grossTurnover, growth:'+640%' },
+      { label:'Y5 Gross Margin',     value:'26.35%', sub:'On billing', icon:'📈', color:'#22c55e', series:P.gpMargin,      growth:'Stable' },
+      { label:'Y5 Net PAT',          value:'₹11.67 Cr', sub:'9.32% net margin', icon:'💵', color:'#f59e0b', series:P.pat,    growth:'+1008%' },
+      { label:'Day-1 Capital',       value:'₹7.5 Cr', sub:'Equity + Bank line', icon:'🏦', color:'#8b5cf6', series:P.cumCapital, growth:'Cum ₹19.7Cr' },
+    ];
+    const kpiCards = kpiDefs.map(k => {
+      const mx = Math.max(...k.series) * 1.12;
+      const mn = Math.min(...k.series) * 0.85;
+      const norm = k.series.map(v => v - mn);
+      const sl = mkChart(norm, (mx - mn) || 1, 120, 40, 7, 7);
+      return {
+        label:k.label, value:k.value, sub:k.sub, icon:k.icon, color:k.color, growth:k.growth,
+        bg:`linear-gradient(140deg, ${k.color}26 0%, ${k.color}08 40%, rgba(22,27,34,0) 75%)`,
+        chipBg:`${k.color}22`,
+        sparkPath: sl.line,
+        sparkArea: sl.area,
+        sparkGrad: k.color,
+      };
+    });
+
+    // ─ REVENUE CHART ─
+    const maxRevenue = 222;
+    const revenueChart = P.years.map((yr, i) => {
+      const act = a[`rev_${i}`];
+      return {
+        yr: `Y${i+1}`,
+        planPct: (P.grossTurnover[i] / maxRevenue * 100).toFixed(1),
+        actualPct: act ? (Number(act) / maxRevenue * 100).toFixed(1) : '0',
+        actual: act ? `₹${Number(act).toFixed(0)}Cr` : '',
+      };
+    });
+
+    // ─ REVENUE TREND (area + line) ─
+    const revMax = 240;
+    const revC = mkChart(P.grossTurnover, revMax, 600, 200, 18, 24);
+    const revLinePath = revC.line;
+    const revAreaPath = revC.area;
+    const revDots = revC.pts.map((p,i) => ({ xPct:p.xPct, yPct:p.yPct, label:`Y${i+1}`, value:`₹${P.grossTurnover[i]}` }));
+    const revActPts = [];
+    P.grossTurnover.forEach((_, i) => {
+      const v = a[`rev_${i}`];
+      if (v !== undefined && v !== '') {
+        const x = (i/4)*600, y = 18 + (200-18-24)*(1 - (Number(v)/revMax));
+        revActPts.push({ x, y, xPct:(x/600*100).toFixed(2), yPct:(y/200*100).toFixed(2), value:`₹${Number(v).toFixed(0)}` });
+      }
+    });
+    const revActLinePath = revActPts.length>1 ? revActPts.map((p,i)=>(i?'L':'M')+p.x.toFixed(1)+','+p.y.toFixed(1)).join(' ') : '';
+    const revActDots = revActPts.map(p => ({ xPct:p.xPct, yPct:p.yPct, value:p.value }));
+    const showRevActLine = revActPts.length>1;
+    const revYLabels = ['240','180','120','60','0'];
+
+    // ─ PAT TREND (area + line) ─
+    const patMax = 13;
+    const patC = mkChart(P.pat, patMax, 600, 150, 14, 22);
+    const patTrendLine = patC.line;
+    const patTrendArea = patC.area;
+    const patTrendDots = patC.pts.map((p,i) => ({ xPct:p.xPct, yPct:p.yPct, label:`Y${i+1}` }));
+    const patActTrendPts = [];
+    P.pat.forEach((_, i) => {
+      const v = a[`pat_${i}`];
+      if (v !== undefined && v !== '') {
+        const x = (i/4)*600, y = 14 + (150-14-22)*(1 - (Number(v)/patMax));
+        patActTrendPts.push({ xPct:(x/600*100).toFixed(2), yPct:(y/150*100).toFixed(2) });
+      }
+    });
+    const patActTrendLine = patActTrendPts.length>1 ? patActTrendPts.map((p,i)=>(i?'L':'M')+(p.xPct*6).toFixed(1)+','+(p.yPct*1.5).toFixed(1)).join(' ') : '';
+
+    // ─ OUTLET CIRCLE ─
+    const outletPct = totalActualOutlets / 1000;
+    const circumference = 2 * Math.PI * 50;
+    const outletDash = circumference.toFixed(1);
+    const outletOffset = (circumference * (1 - Math.min(outletPct, 1))).toFixed(1);
+
+    const outletYears = P.years.map((yr, i) => {
+      const act = Number(a[`outlets_${i}`] || 0);
+      const plan = P.outlets[i];
+      const pct = act ? Math.min(act / plan * 100, 100).toFixed(1) : '0';
+      const ok = act >= plan;
+      return {
+        label: yr, plan, actual: act || '—',
+        pct, color: act ? (ok ? '#22c55e' : '#f59e0b') : '#21262d',
+      };
+    });
+
+    // ─ PAT ROWS ─
+    const maxPAT = 11.665;
+    const patRows = P.years.map((yr, i) => {
+      const act = a[`pat_${i}`];
+      const planV = P.pat[i];
+      const planPct = (planV / maxPAT * 100).toFixed(1);
+      const actualPct = act ? Math.min(Number(act) / maxPAT * 100, 100).toFixed(1) : '0';
+      const ok = act && Number(act) >= planV;
+      return {
+        yr, plan: planV.toFixed(2),
+        actualLabel: act ? `₹${Number(act).toFixed(2)}Cr` : '—',
+        planPct, actualPct, color: act ? (ok ? '#22c55e' : '#ef4444') : '#C4122F',
+      };
+    });
+
+    // ─ MARGIN ITEMS ─
+    const marginRaw = [
+      { label:'Retailer Billing', basis:'% of MRP', value:'56.35%', color:'#60a5fa' },
+      { label:'Company COGS',     basis:'% of MRP', value:'41.50%', color:'#f87171' },
+      { label:'Gross Margin',     basis:'On billing', value:'26.35%', color:'#22c55e' },
+      { label:'Blended Discount', basis:'Weighted avg', value:'19.50%', color:'#f59e0b' },
+      { label:'EBITDA Margin Y5', basis:'On billing', value:'10.21%', color:'#38bdf8' },
+      { label:'PAT Margin Y5',    basis:'On billing', value:'9.32%',  color:'#a78bfa' },
+    ];
+    const marginItems = marginRaw.map(m => ({ ...m, barPct: Math.min(parseFloat(m.value)/60*100, 100).toFixed(0) + '%' }));
+
+    // ─ CAPITAL ITEMS ─
+    const capitalItems = [
+      { label:'Promoter Equity', value:'₹4.50 Cr', color:'#8b5cf6' },
+      { label:'Bank Credit Line', value:'₹3.00 Cr', color:'#3b82f6' },
+      { label:'Total Day-1 Capital', value:'₹7.50 Cr', color:'#38bdf8' },
+      { label:'Net Capex / Outlet', value:'₹1.88 L', color:'#f59e0b' },
+      { label:'Y5 Cum. Capital', value:'₹19.70 Cr', color:'#f87171' },
+      { label:'Y5 ROI (PAT/Cum Cap)', value:'59.21%', color:'#22c55e' },
+    ];
+
+    // ─ PRODUCT ROWS ─
+    const maxMix = 11.95;
+    const productRows = PRODUCTS.map(prod => {
+      const gmNum = Number(prod.gm);
+      const mixNum = parseFloat(String(prod.mix));
+      return {
+        name: prod.name,
+        fabric: prod.fabric,
+        mrp: prod.mrp,
+        skus: prod.skus,
+        mix: prod.mix,
+        gmColor: gmNum > 25 ? '#22c55e' : gmNum > 22 ? '#f59e0b' : '#ef4444',
+        barWidth: (mixNum / maxMix * 100).toFixed(0) + '%',
+        gm: gmNum.toFixed(1) + '%',
+      };
+    });
+
+    // ─ ACTUALS INPUT ─
+    const inputYears = P.years.map((yr, i) => ({
+      label: yr,
+      planOutlets: P.outlets[i],
+      planRevenue: P.grossTurnover[i],
+      planGP: P.grossProfit[i].toFixed(3),
+      planPAT: P.pat[i].toFixed(3),
+      actualOutlets: a[`outlets_${i}`] || '',
+      actualRevenue: a[`rev_${i}`] || '',
+      actualGP: a[`gp_${i}`] || '',
+      actualPAT: a[`pat_${i}`] || '',
+      onOutletsChange: (e) => this._updateActual(`outlets_${i}`, e.target.value),
+      onRevenueChange: (e) => this._updateActual(`rev_${i}`, e.target.value),
+      onGPChange:      (e) => this._updateActual(`gp_${i}`, e.target.value),
+      onPATChange:     (e) => this._updateActual(`pat_${i}`, e.target.value),
+    }));
+
+    const quarterLabels = ['Q1','Q2','Q3','Q4','Q5','Q6','Q7','Q8','Q9','Q10','Q11','Q12','Q13','Q14','Q15','Q16','Q17','Q18','Q19','Q20'];
+    const quarterInputs = QUARTERLY_PLAN.map((plan, i) => ({
+      label: quarterLabels[i],
+      plan,
+      actual: a[`q_${i}`] || '',
+      onChange: (e) => this._updateActual(`q_${i}`, e.target.value),
+    }));
+
+    const reportingPeriod = a.period || '';
+    const notes = a.notes || '';
+    const onPeriodChange = (e) => this._updateActual('period', e.target.value);
+    const onNotesChange  = (e) => this._updateActual('notes',  e.target.value);
+
+    const saveStatusMap = {
+      idle: { bg:'#21262d', color:'#7d8590', msg:'Ready to save · Click "Save Data" to persist' },
+      saved:   { bg:'#0d3a1a', color:'#22c55e', msg:'✓ Data saved successfully' },
+      cleared: { bg:'#3a0d0d', color:'#ef4444', msg:'Data cleared' },
+    };
+    const ss = saveStatusMap[saveStatus] || saveStatusMap.idle;
+
+    // ─ P&L TABLE ─
+    const plHeaders = ['Y1','Y2','Y3','Y4','Y5'];
+    const plRowDefs = [
+      { label:'Outlets',           key:'outlets',       plan: P.outlets,       aKey:'outlets', fmt: v=>v, section:false },
+      { label:'Gross Turnover (MRP)',key:'rev',         plan: P.grossTurnover, aKey:'rev',     fmt: v=>`₹${v}Cr`, section:false },
+      { label:'Primary Billing',   key:'pb',            plan: P.primaryBilling,aKey:null,      fmt: v=>`₹${this.fmt(v)}Cr`, section:false },
+      { label:'COGS',              key:'cogs',          plan: P.cogs,          aKey:null,      fmt: v=>`₹${this.fmt(v)}Cr`, section:false },
+      { label:'Gross Profit',      key:'gp',            plan: P.grossProfit,   aKey:'gp',      fmt: v=>`₹${this.fmt(v)}Cr`, section:false },
+      { label:'GP Margin %',       key:'gpm',           plan: P.gpMargin,      aKey:null,      fmt: v=>`${this.fmt(v,2)}%`, section:false },
+      { label:'EBITDA',            key:'ebitda',        plan: P.ebitda,        aKey:null,      fmt: v=>`₹${this.fmt(v)}Cr`, section:false },
+      { label:'Net Profit (PAT)',  key:'pat',           plan: P.pat,           aKey:'pat',     fmt: v=>`₹${this.fmt(v)}Cr`, section:false, bold:true },
+      { label:'PAT Margin %',      key:'patm',          plan: P.patMargin,     aKey:null,      fmt: v=>`${this.fmt(v,2)}%`, section:false },
+    ];
+    const plRows = plRowDefs.map(row => ({
+      label: row.label,
+      labelColor: row.bold ? '#f0f6fc' : '#e6edf3',
+      fw: row.bold ? '700' : '400',
+      bg: row.bold ? '#161b22' : 'transparent',
+      pad: row.bold ? '14px' : '10px',
+      cells: P.years.map((_, i) => {
+        const planV = row.plan[i];
+        const actV = row.aKey ? a[`${row.aKey}_${i}`] : null;
+        const v = this.fmtVar(planV, actV);
+        return {
+          plan: row.fmt(planV),
+          actual: actV ? row.fmt(Number(actV)) : '—',
+          var: actV ? v.txt : '',
+          planColor: '#7d8590',
+          actualColor: actV ? '#f0f6fc' : '#3a3f47',
+          varColor: v.color,
+        };
+      }),
+    }));
+
+    // ─ OPEX ITEMS ─
+    const opexItems = [
+      { label:'3PL / Logistics',     value:'~3.0%', pct:30, color:'#3b82f6' },
+      { label:'Field Ops',           value:'~2.8%', pct:28, color:'#8b5cf6' },
+      { label:'Stock Obsolescence',  value:'1.5%',  pct:15, color:'#f59e0b' },
+      { label:'MBO Returns',         value:'1.5%',  pct:15, color:'#f97316' },
+      { label:'Bad Debt / Default',  value:'1.0%',  pct:10, color:'#ef4444' },
+      { label:'Marketing / Brand',   value:'1.0%',  pct:10, color:'#22c55e' },
+      { label:'Bank Interest',       value:'Varies',pct:8,  color:'#7d8590' },
+    ];
+
+    // ─ QUARTER CARDS ─
+    const quarterCards = QUARTERLY_PLAN.map((plan, i) => {
+      const act = Number(a[`q_${i}`] || 0);
+      const hasActual = a[`q_${i}`] !== undefined && a[`q_${i}`] !== '';
+      const pct = hasActual ? Math.min(act / plan * 100, 120).toFixed(0) : 0;
+      const ok = act >= plan;
+      const ahead = act > plan;
+      const status = !hasActual ? 'PENDING' : ahead ? 'AHEAD' : ok ? 'ON TRACK' : 'BEHIND';
+      const statusColors = {
+        'PENDING': { bg:'#21262d', color:'#7d8590' },
+        'AHEAD':   { bg:'#0d3a1a', color:'#22c55e' },
+        'ON TRACK':{ bg:'#0d2a3a', color:'#3b82f6' },
+        'BEHIND':  { bg:'#3a0d0d', color:'#ef4444' },
+      };
+      const sc = statusColors[status];
+      const varAmt = hasActual ? (act - plan) : 0;
+      return {
+        label: quarterLabels[i],
+        plan,
+        actual: hasActual ? act : '—',
+        pct,
+        status,
+        statusBg: sc.bg,
+        statusColor: sc.color,
+        border: hasActual ? (ok ? '#22c55e33' : '#ef444433') : '#21262d',
+        barColor: hasActual ? (ok ? '#22c55e' : '#ef4444') : '#21262d',
+        varLabel: hasActual ? `${varAmt >= 0 ? '+' : ''}${varAmt} vs plan` : 'No data entered',
+        varColor: hasActual ? (ok ? '#22c55e' : '#ef4444') : '#7d8590',
+      };
+    });
+
+    // ─ RAMP BARS ─
+    const rampBars = QUARTERLY_PLAN.map((plan, i) => {
+      const act = Number(a[`q_${i}`] || 0);
+      const hasActual = a[`q_${i}`] !== undefined && a[`q_${i}`] !== '';
+      return {
+        label: quarterLabels[i],
+        planPct: (plan / 1000 * 100).toFixed(1),
+        actualPct: hasActual ? (act / 1000 * 100).toFixed(1) : '0',
+        actualColor: hasActual ? (act >= plan ? '#22c55e' : '#ef4444') : '#21262d',
+      };
+    });
+
+    // ─ PUMA TERMS ─
+    const pumaTerms = [
+      { term:'Retailer Billing (% MRP)', value:'56.35%', note:'Net realisation to company' },
+      { term:'Company COGS (% MRP)',     value:'41.50%', note:'Goods cost landed at company' },
+      { term:'MBO Margin (% MRP)',       value:'23.55%', note:"MBO's share on MRP" },
+      { term:'SIS Asset Refund',         value:'100%',   note:'By PUMA over 5 years' },
+      { term:'PUMA SIS Payment (p.a.)',  value:'20%',    note:'Of SIS setup cost annually' },
+      { term:'Credit Period from PUMA',  value:'60 days',note:'Supplier credit to company' },
+      { term:'TOD from PUMA',            value:'2%',     note:'Trade offer discount' },
+      { term:'Security Deposit / Outlet',value:'₹2.00L', note:'Refundable from retailer' },
+      { term:'Contract Tenure',          value:'5 years',note:'Initial agreement horizon' },
+      { term:'Exclusivity',              value:'Yes',    note:'PUMA innerwear/loungewear' },
+    ];
+
+    // ─ FUNDING ─
+    const fundingItems = [
+      { source:'Promoter Equity (Inderpal 40%, Sachin 30%, Neeraj 30%)', amount:'₹4.50 Cr', note:'Day-1 capital' },
+      { source:'Initial Bank Credit Line', amount:'₹3.00 Cr', note:'Working capital at inception' },
+      { source:'Total Day-1 Capital',      amount:'₹7.50 Cr', note:'Equity + Bank line' },
+      { source:'Bank Interest Rate (p.a.)',amount:'11.00%',   note:'Working capital loan rate' },
+    ];
+
+    // ─ RISK ITEMS ─
+    const riskItems = [
+      { item:'Stock Obsolescence',   rate:'1.5% of COGS', basis:'Seasonal write-down' },
+      { item:'MBO Returns Provision',rate:'1.5% billing', basis:'Consignment returns' },
+      { item:'Bad Debt / Default',   rate:'1.0% billing', basis:'Receivable default' },
+      { item:'Marketing / Activation',rate:'1.0% billing',basis:'Beyond SIS fee' },
+      { item:'Field-Ops per outlet', rate:'₹18,000/yr',   basis:'Area mgrs, merchandisers' },
+      { item:'Receivable Days (MBO)',rate:'30 days',       basis:'Collection cycle' },
+      { item:'Inventory Days',       rate:'60 days',       basis:'Stock cover target' },
+    ];
+
+    // ─ SCENARIOS ─
+    const scenarioDefs = [
+      { id:1, label:'Base Scenario',     desc:'Full ramp to 1,000 outlets · 21.5% blended discount · 11% interest' },
+      { id:2, label:'Downside Scenario', desc:'800 outlets Y5 · 30% discount · higher defaults' },
+      { id:3, label:'Bear Scenario',     desc:'600 outlets Y5 · 40% discount · 14% interest rate' },
+    ];
+    const scenarios = scenarioDefs.map(s => ({
+      ...s,
+      onClick: () => this.setState({ scenario: s.id }),
+      bg: scenario === s.id ? '#21262d' : 'transparent',
+      status: scenario === s.id ? 'ACTIVE' : 'SELECT',
+      badgeBg: scenario === s.id ? '#C4122F' : '#21262d',
+      badgeColor: scenario === s.id ? '#fff' : '#7d8590',
+    }));
+
+    // ─ UPLOAD STATE ─
+    const { uploadStatus, uploadPreviewRows, uploadFileName } = this.state;
+    const uploadStates = {
+      idle:    { icon:'📊', title:'Drop Excel file here or click to browse', sub:'.xlsx files only · PUMA SIS Report format',  border:'#30363d', zoneBg:'transparent' },
+      parsing: { icon:'⏳', title:'Parsing Excel file…',                     sub:'Extracting sheets and mapping data fields',  border:'#f59e0b', zoneBg:'#1a1500' },
+      preview: { icon:'✅', title:'Data extracted — review below',           sub:'Check values then click Apply to Dashboard', border:'#22c55e', zoneBg:'#0a1a0a' },
+      done:    { icon:'🎉', title:'Data imported successfully!',             sub:'Dashboard and P&L Tracker are now updated',  border:'#22c55e', zoneBg:'#0a1a0a' },
+      error:   { icon:'❌', title:'Upload failed',                           sub: this.state.uploadError,                     border:'#ef4444', zoneBg:'#1a0a0a' },
+    };
+    const us = uploadStates[uploadStatus] || uploadStates.idle;
+    const uploadMsgMap = {
+      parsing: { bg:'#1a1500', color:'#f59e0b', msg:'⏳ Reading file structure and extracting cells…' },
+      done:    { bg:'#0d3a1a', color:'#22c55e', msg:'✓ Import complete — actuals saved to dashboard' },
+      error:   { bg:'#3a0d0d', color:'#ef4444', msg:'✗ ' + this.state.uploadError },
+    };
+    const um = uploadMsgMap[uploadStatus];
+
+    const triggerFileInput = () => { if(this._fileInput) this._fileInput.click(); };
+    const onDragOver = (e) => { e.preventDefault(); e.stopPropagation(); };
+    const onFileDrop = (e) => { e.preventDefault(); const f = e.dataTransfer.files[0]; if(f) this._handleFileUpload(f); };
+    const onFileSelect = (e) => { const f = e.target.files[0]; if(f) this._handleFileUpload(f); };
+    const fileInputRef = (el) => { this._fileInput = el; };
+    const confirmImport = () => this._confirmImport();
+    const cancelImport  = () => this._cancelImport();
+
+    // Save/clear handlers
+    const saveActuals = () => {
+      this._saveActuals(this.state.actuals);
+      this.setState({ saveStatus:'saved' });
+      setTimeout(() => this.setState({ saveStatus:'idle' }), 3000);
+    };
+    const clearActuals = () => {
+      if(!window.confirm('Clear all entered actuals?')) return;
+      localStorage.removeItem('puma_sis_actuals');
+      this.setState({ actuals:{}, saveStatus:'cleared' });
+      setTimeout(() => this.setState({ saveStatus:'idle' }), 3000);
+    };
+
+    return {
+      tabs,
+      scenarioLabel,
+      lastUpdated,
+      showDashboard: activeTab === 'dashboard',
+      showActuals:   activeTab === 'actuals',
+      showPL:        activeTab === 'pl',
+      showOutlets:   activeTab === 'outlets',
+      showAssumptions: activeTab === 'assumptions',
+      // dashboard
+      kpiCards,
+      revenueChart,
+      revLinePath, revAreaPath, revDots, revActLinePath, revActDots, showRevActLine, revYLabels,
+      patTrendLine, patTrendArea, patTrendDots, patActTrendLine,
+      totalActualOutlets: totalActualOutlets || '—',
+      outletDash,
+      outletOffset,
+      outletYears,
+      patRows,
+      marginItems,
+      capitalItems,
+      productRows,
+      // upload
+      triggerFileInput, onDragOver, onFileDrop, onFileSelect, fileInputRef,
+      confirmImport, cancelImport,
+      uploadBorderColor: us.border,
+      uploadZoneBg: us.zoneBg,
+      uploadIcon: us.icon,
+      uploadZoneTitle: us.title,
+      uploadZoneSub: us.sub,
+      showUploadMsg: !!um,
+      uploadMsgBg: um ? um.bg : '#21262d',
+      uploadMsgColor: um ? um.color : '#7d8590',
+      uploadMsg: um ? um.msg : '',
+      showUploadPreview: uploadStatus === 'preview',
+      uploadPreviewRows,
+      uploadFileName: uploadFileName ? '📄 ' + uploadFileName : '',
+      // actuals
+      inputYears,
+      quarterInputs,
+      reportingPeriod,
+      notes,
+      onPeriodChange,
+      onNotesChange,
+      saveActuals,
+      clearActuals,
+      saveStatusBg: ss.bg,
+      saveStatusColor: ss.color,
+      saveStatusMsg: ss.msg,
+      // p&l
+      plHeaders,
+      plRows,
+      opexItems,
+      // outlet tracker
+      quarterCards,
+      rampBars,
+      // assumptions
+      pumaTerms,
+      fundingItems,
+      riskItems,
+      scenarios,
+    };
+  }
+
+  _updateActual(key, value) {
+    this.setState(prev => ({
+      actuals: { ...prev.actuals, [key]: value },
+    }));
+  }
+
+
+}
+</script>
+
+
+</body></html>
